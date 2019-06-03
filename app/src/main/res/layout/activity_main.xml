@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/txt_reg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
+        android:text="Register"
+        android:textColor="@color/colorAccent"
         android:textSize="30sp"
 
         app:layout_constraintBottom_toTopOf="@+id/edt_name"
@@ -19,19 +21,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/edt_name"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
 
-        android:hint="enter_name"
+        android:hint="enter_firstname"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edt_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_reg" />
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <EditText
+        android:id="@+id/edt_lnamename"
+        android:layout_width="250dp"
+        android:layout_height="78dp"
+
+        android:hint="enter_lastname"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="189dp" />
 
     <EditText
         android:id="@+id/edt_email"
@@ -41,11 +52,8 @@
         android:hint="enter email address"
         android:inputType="textEmailAddress"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edt_numpass"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_name" />
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="278dp" />
 
     <EditText
         android:id="@+id/edt_numpass"
@@ -57,17 +65,52 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_submit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
 
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="submit"
+        android:textColor="@color/colorAccent"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_numpass"
         tools:layout_editor_absoluteX="144dp" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_numpass"
+        tools:layout_editor_absoluteX="144dp" />
+
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="exit"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_numpass"
+        app:layout_constraintVertical_bias="0.508"
+        tools:layout_editor_absoluteX="280dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="468dp"
+        android:layout_height="104dp"
+        android:src="@drawable/pic"
+        tools:layout_editor_absoluteX="-49dp"
+        tools:layout_editor_absoluteY="0dp" />
 </android.support.constraint.ConstraintLayout>
