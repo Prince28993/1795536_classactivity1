@@ -4,30 +4,40 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
+    EditText edt_name,    edt_numpass;
+    Button  btn_submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.1795536_activity1);
+        setContentView(R.layout.main_activity1);
+         String TAG, btn_sub;
+        Button btn;
+        Text View reg;
+        EditText name , email, password;
 
-        Object edt_name = findViewById(R.id.edt_name);
-        edt_email = findViewById(R.id.edt_email);
-        edt_pass = findViewById(R.id.edt_numpass);
+        final Object edt_name = findViewById(R.id.edt_name);
+       // edt_email = findViewById(R.id.edt_email);
+        edt_numpass = findViewById(R.id.edt_numpass);
 
-        btn_sub = findViewById(R.id.btn_submit);
+        btn_submit = findViewById(R.id.btn_submit);
 
-        btn_sub.setOnClickListener(new View.OnClickListener() {
+        btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 String name = edt_name.getText().toString();
-                String email = edt_email.getText().toString();
+               // String email = edt_email.getText().toString();
 
                 Log.v(TAG,name);
-                Log.v(TAG,email);
-                Log.v(TAG,edt_pass.getText().toString());
+
+                Log.v(TAG,edt_name.getText().toString());
 
             }
         });
